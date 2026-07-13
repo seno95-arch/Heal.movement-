@@ -26,6 +26,7 @@ padding:20px 8%;
 background:#42005f;
 position:sticky;
 top:0;
+z-index:100;
 }
 
 .logo{
@@ -47,6 +48,11 @@ margin-left:30px;
 color:white;
 text-decoration:none;
 font-weight:600;
+transition:color 0.3s;
+}
+
+.navbar a:hover{
+color:gold;
 }
 
 .hero{
@@ -83,6 +89,13 @@ padding:15px 35px;
 border-radius:40px;
 text-decoration:none;
 font-weight:bold;
+transition:all 0.3s;
+display:inline-block;
+}
+
+.btn:hover{
+background:white;
+transform:scale(1.05);
 }
 
 .hero-image img{
@@ -111,11 +124,209 @@ margin:auto;
 line-height:1.8;
 }
 
+.welcome h2{
+font-size:50px;
+color:gold;
+margin-bottom:40px;
+}
+
+/* CANDIDATES SECTION */
+.candidates-container{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+gap:30px;
+padding:80px;
+max-width:1200px;
+margin:auto;
+}
+
+.candidate-card{
+background:linear-gradient(135deg, #42005f, #2f0147);
+border:2px solid gold;
+border-radius:15px;
+overflow:hidden;
+transition:all 0.3s;
+box-shadow:0 5px 20px rgba(212, 175, 55, 0.3);
+}
+
+.candidate-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(212, 175, 55, 0.6);
+}
+
+.candidate-image{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.candidate-info{
+padding:30px;
+text-align:center;
+}
+
+.candidate-info h3{
+font-size:28px;
+color:gold;
+margin-bottom:15px;
+}
+
+.candidate-info p{
+font-size:16px;
+color:#ccc;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.candidate-role{
+font-size:18px;
+font-weight:bold;
+color:gold;
+margin-bottom:15px;
+display:block;
+}
+
+.candidate-quote{
+font-style:italic;
+color:#aaa;
+font-size:14px;
+border-left:3px solid gold;
+padding-left:15px;
+margin-top:15px;
+}
+
+/* GALLERY SECTION - POSTER AND PROFILES BELOW */
+.gallery-section{
+padding:80px;
+text-align:center;
+}
+
+.gallery-section h2{
+font-size:50px;
+color:gold;
+margin-bottom:40px;
+}
+
+.poster-container{
+margin-bottom:60px;
+}
+
+.poster-container img{
+max-width:100%;
+height:auto;
+border-radius:15px;
+box-shadow:0 0 40px rgba(212, 175, 55, 0.5);
+max-height:600px;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery-item{
+position:relative;
+overflow:hidden;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(212, 175, 55, 0.3);
+transition:all 0.3s;
+}
+
+.gallery-item:hover{
+transform:scale(1.05);
+box-shadow:0 10px 30px rgba(212, 175, 55, 0.6);
+}
+
+.gallery-item img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+padding:80px;
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+.contact-section h2{
+font-size:50px;
+color:gold;
+margin-bottom:40px;
+}
+
+.contact-info{
+background:linear-gradient(135deg, #42005f, #2f0147);
+border:2px solid gold;
+border-radius:15px;
+padding:40px;
+margin-bottom:30px;
+}
+
+.contact-info p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.contact-info strong{
+color:gold;
+}
+
+.contact-link{
+color:gold;
+text-decoration:none;
+font-weight:bold;
+transition:all 0.3s;
+}
+
+.contact-link:hover{
+color:white;
+text-decoration:underline;
+}
+
 footer{
 background:#1d012d;
 text-align:center;
 padding:30px;
 margin-top:80px;
+}
+
+@media (max-width:768px){
+.hero{
+flex-direction:column;
+padding:40px;
+}
+
+.hero-text{
+width:100%;
+margin-bottom:40px;
+}
+
+.hero-text h1{
+font-size:45px;
+}
+
+.hero-image img{
+width:100%;
+max-width:400px;
+}
+
+.candidates-container{
+padding:40px 20px;
+}
+
+.gallery-section{
+padding:40px 20px;
+}
+
+.contact-section{
+padding:40px 20px;
+}
 }
 </style>
 
@@ -180,7 +391,7 @@ Read Our Manifesto
 
 <div class="hero-image">
 
-<img src="assets/images/poster.jpg" alt="Campaign Poster">
+<img src="poster.png" alt="Campaign Poster">
 
 </div>
 
@@ -219,11 +430,82 @@ transparency and servant leadership.
 </section>
 
 <!-- CANDIDATES SECTION -->
-<section class="welcome" id="candidates">
+<section id="candidates">
 
+<div class="welcome">
 <h2>Our Candidates</h2>
-
 <p>Meet the dedicated candidates running under the HEAL Movement banner. Each candidate is committed to serving the student community with integrity and passion.</p>
+</div>
+
+<div class="candidates-container">
+
+<!-- CALISTUS -->
+<div class="candidate-card">
+<img src="CALISTUS.jpg" alt="Calistus" class="candidate-image">
+<div class="candidate-info">
+<h3>CALISTUS</h3>
+<span class="candidate-role">Presidential Candidate</span>
+<p>Visionary leader committed to driving positive change and fostering unity within the student community.</p>
+<div class="candidate-quote">"Together, we rise. Together, we lead."</div>
+</div>
+</div>
+
+<!-- ELIZABETH -->
+<div class="candidate-card">
+<img src="ELIZABETH.jpg" alt="Elizabeth" class="candidate-image">
+<div class="candidate-info">
+<h3>ELIZABETH</h3>
+<span class="candidate-role">Vice President Candidate</span>
+<p>Passionate advocate for student welfare, dedicated to ensuring every voice is heard and valued.</p>
+<div class="candidate-quote">"Empowerment through representation."</div>
+</div>
+</div>
+
+<!-- LINDSY -->
+<div class="candidate-card">
+<img src="LINDSY.jpg" alt="Lindsy" class="candidate-image">
+<div class="candidate-info">
+<h3>LINDSY</h3>
+<span class="candidate-role">Secretary Candidate</span>
+<p>Organized and detail-oriented, committed to transparent communication and efficient administration.</p>
+<div class="candidate-quote">"Clear communication, strong leadership."</div>
+</div>
+</div>
+
+<!-- MARKOSE -->
+<div class="candidate-card">
+<img src="MARKOSE.jpg" alt="Markose" class="candidate-image">
+<div class="candidate-info">
+<h3>MARKOSE</h3>
+<span class="candidate-role">Treasurer Candidate</span>
+<p>Financial steward dedicated to responsible budget management and accountability in resource allocation.</p>
+<div class="candidate-quote">"Financial integrity, student prosperity."</div>
+</div>
+</div>
+
+<!-- MUTABARI -->
+<div class="candidate-card">
+<img src="MUTABARI.jpg" alt="Mutabari" class="candidate-image">
+<div class="candidate-info">
+<h3>MUTABARI</h3>
+<span class="candidate-role">Sports & Recreation Officer</span>
+<p>Sports enthusiast promoting student wellness, team spirit, and active lifestyle for all.</p>
+<div class="candidate-quote">"Healthy students, thriving community."</div>
+</div>
+</div>
+
+<!-- OCHIENG -->
+<div class="candidate-card">
+<img src="OCHIENG.jpg" alt="Ochieng" class="candidate-image">
+<div class="candidate-info">
+<h3>OCHIENG</h3>
+<span class="candidate-role">Student Affairs Officer</span>
+<p>Dedicated to improving student life, advocating for academic support and holistic development.</p>
+<div class="candidate-quote">"Student success is our mission."</div>
+</div>
+</div>
+
+</div>
 
 </section>
 
@@ -242,25 +524,52 @@ transparency and servant leadership.
 
 </section>
 
-<!-- GALLERY SECTION -->
-<section class="welcome" id="gallery">
+<!-- GALLERY SECTION WITH POSTER AND PROFILES -->
+<section class="gallery-section" id="gallery">
 
-<h2>Gallery</h2>
+<h2>Campaign Gallery</h2>
 
-<p>Check back soon for photos and videos from our campaign events and student engagements.</p>
+<div class="poster-container">
+<h3 style="color:gold; margin-bottom:30px; font-size:32px;">Official Campaign Poster</h3>
+<img src="poster.png" alt="Campaign Poster">
+</div>
+
+<h3 style="color:gold; margin-bottom:30px; font-size:32px; margin-top:60px;">Our Candidates</h3>
+
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="CALISTUS.jpg" alt="Calistus">
+</div>
+<div class="gallery-item">
+<img src="ELIZABETH.jpg" alt="Elizabeth">
+</div>
+<div class="gallery-item">
+<img src="LINDSY.jpg" alt="Lindsy">
+</div>
+<div class="gallery-item">
+<img src="MARKOSE.jpg" alt="Markose">
+</div>
+<div class="gallery-item">
+<img src="MUTABARI.jpg" alt="Mutabari">
+</div>
+<div class="gallery-item">
+<img src="OCHIENG.jpg" alt="Ochieng">
+</div>
+</div>
 
 </section>
 
 <!-- CONTACT SECTION -->
-<section class="welcome" id="contact">
+<section class="contact-section" id="contact">
 
 <h2>Contact Us</h2>
 
 <p>Have questions or want to get involved with the HEAL Movement? Reach out to us!</p>
 
-<p><strong>Email:</strong> contact@healmovement.com</p>
-
-<p><strong>Phone:</strong> +1 (555) 123-4567</p>
+<div class="contact-info">
+<p><strong>Email:</strong> <a href="mailto:IDAHMUTABARI@GMAIL.COM" class="contact-link">IDAHMUTABARI@GMAIL.COM</a></p>
+<p><strong>Phone:</strong> <a href="tel:0798476346" class="contact-link">0798476346</a></p>
+</div>
 
 </section>
 
