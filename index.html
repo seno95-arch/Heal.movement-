@@ -195,6 +195,100 @@ padding-left:15px;
 margin-top:15px;
 }
 
+/* GALLERY SECTION - POSTER AND PROFILES BELOW */
+.gallery-section{
+padding:80px;
+text-align:center;
+}
+
+.gallery-section h2{
+font-size:50px;
+color:gold;
+margin-bottom:40px;
+}
+
+.poster-container{
+margin-bottom:60px;
+}
+
+.poster-container img{
+max-width:100%;
+height:auto;
+border-radius:15px;
+box-shadow:0 0 40px rgba(212, 175, 55, 0.5);
+max-height:600px;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery-item{
+position:relative;
+overflow:hidden;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(212, 175, 55, 0.3);
+transition:all 0.3s;
+}
+
+.gallery-item:hover{
+transform:scale(1.05);
+box-shadow:0 10px 30px rgba(212, 175, 55, 0.6);
+}
+
+.gallery-item img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+padding:80px;
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+.contact-section h2{
+font-size:50px;
+color:gold;
+margin-bottom:40px;
+}
+
+.contact-info{
+background:linear-gradient(135deg, #42005f, #2f0147);
+border:2px solid gold;
+border-radius:15px;
+padding:40px;
+margin-bottom:30px;
+}
+
+.contact-info p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.contact-info strong{
+color:gold;
+}
+
+.contact-link{
+color:gold;
+text-decoration:none;
+font-weight:bold;
+transition:all 0.3s;
+}
+
+.contact-link:hover{
+color:white;
+text-decoration:underline;
+}
+
 footer{
 background:#1d012d;
 text-align:center;
@@ -223,6 +317,14 @@ max-width:400px;
 }
 
 .candidates-container{
+padding:40px 20px;
+}
+
+.gallery-section{
+padding:40px 20px;
+}
+
+.contact-section{
 padding:40px 20px;
 }
 }
@@ -422,25 +524,52 @@ transparency and servant leadership.
 
 </section>
 
-<!-- GALLERY SECTION -->
-<section class="welcome" id="gallery">
+<!-- GALLERY SECTION WITH POSTER AND PROFILES -->
+<section class="gallery-section" id="gallery">
 
-<h2>Gallery</h2>
+<h2>Campaign Gallery</h2>
 
-<p>Check back soon for photos and videos from our campaign events and student engagements.</p>
+<div class="poster-container">
+<h3 style="color:gold; margin-bottom:30px; font-size:32px;">Official Campaign Poster</h3>
+<img src="poster.png" alt="Campaign Poster">
+</div>
+
+<h3 style="color:gold; margin-bottom:30px; font-size:32px; margin-top:60px;">Our Candidates</h3>
+
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="CALISTUS.jpg" alt="Calistus">
+</div>
+<div class="gallery-item">
+<img src="ELIZABETH.jpg" alt="Elizabeth">
+</div>
+<div class="gallery-item">
+<img src="LINDSY.jpg" alt="Lindsy">
+</div>
+<div class="gallery-item">
+<img src="MARKOSE.jpg" alt="Markose">
+</div>
+<div class="gallery-item">
+<img src="MUTABARI.jpg" alt="Mutabari">
+</div>
+<div class="gallery-item">
+<img src="OCHIENG.jpg" alt="Ochieng">
+</div>
+</div>
 
 </section>
 
 <!-- CONTACT SECTION -->
-<section class="welcome" id="contact">
+<section class="contact-section" id="contact">
 
 <h2>Contact Us</h2>
 
 <p>Have questions or want to get involved with the HEAL Movement? Reach out to us!</p>
 
-<p><strong>Email:</strong> contact@healmovement.com</p>
-
-<p><strong>Phone:</strong> +1 (555) 123-4567</p>
+<div class="contact-info">
+<p><strong>Email:</strong> <a href="mailto:IDAHMUTABARI@GMAIL.COM" class="contact-link">IDAHMUTABARI@GMAIL.COM</a></p>
+<p><strong>Phone:</strong> <a href="tel:0798476346" class="contact-link">0798476346</a></p>
+</div>
 
 </section>
 
