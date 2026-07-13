@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEAL Movement | SLCMC SRC Elections 2026/2027</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#2f0147;
+color:white;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#42005f;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:gold;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+}
+
+.navbar li{
+margin-left:30px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px;
+}
+
+.hero-text{
+width:50%;
+}
+
+.hero-text h1{
+font-size:70px;
+color:gold;
+margin:20px 0;
+}
+
+.hero-text h2{
+font-size:30px;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+background:gold;
+color:#2f0147;
+padding:15px 35px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero-image img{
+width:500px;
+border-radius:20px;
+box-shadow:0 0 40px gold;
+}
+
+.countdown{
+text-align:center;
+padding:80px;
+}
+
+#timer{
+font-size:45px;
+font-weight:bold;
+color:gold;
+margin-top:20px;
+}
+
+.welcome{
+padding:80px;
+text-align:center;
+max-width:1000px;
+margin:auto;
+line-height:1.8;
+}
+
+footer{
+background:#1d012d;
+text-align:center;
+padding:30px;
+margin-top:80px;
+}
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+HEAL MOVEMENT
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#candidates">Candidates</a></li>
+
+<li><a href="#manifesto">Manifesto</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HOME SECTION -->
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h3>SLCMC SRC ELECTIONS 2026/2027</h3>
+
+<h1>HEAL MOVEMENT</h1>
+
+<h2>Health • Empowerment • Advocacy • Leadership</h2>
+
+<p>
+
+Every Voice Counts. Every Student Matters.
+
+</p>
+
+<a href="#manifesto" class="btn">
+
+Read Our Manifesto
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="assets/images/poster.jpg" alt="Campaign Poster">
+
+</div>
+
+</section>
+
+<!-- COUNTDOWN SECTION -->
+<section class="countdown">
+
+<h2>Election Day</h2>
+
+<h1>31 July 2026</h1>
+
+<div id="timer"></div>
+
+</section>
+
+<!-- WELCOME SECTION -->
+<section class="welcome" id="about">
+
+<h2>Welcome to the HEAL Movement</h2>
+
+<p>
+
+Together we are building a stronger student community through
+Health, Empowerment, Advocacy and Leadership.
+
+We believe every student deserves quality representation,
+academic excellence,
+mental wellness,
+sports development,
+innovation,
+transparency and servant leadership.
+
+</p>
+
+</section>
+
+<!-- CANDIDATES SECTION -->
+<section class="welcome" id="candidates">
+
+<h2>Our Candidates</h2>
+
+<p>Meet the dedicated candidates running under the HEAL Movement banner. Each candidate is committed to serving the student community with integrity and passion.</p>
+
+</section>
+
+<!-- MANIFESTO SECTION -->
+<section class="welcome" id="manifesto">
+
+<h2>Our Manifesto</h2>
+
+<p><strong>Health:</strong> We are committed to promoting physical, mental, and emotional wellness for all students.</p>
+
+<p><strong>Empowerment:</strong> We believe in giving students the tools and platforms to voice their opinions and make decisions that affect their lives.</p>
+
+<p><strong>Advocacy:</strong> We stand up for student rights and work to address the challenges facing our community.</p>
+
+<p><strong>Leadership:</strong> We foster transparent, accountable, and servant leadership that puts students first.</p>
+
+</section>
+
+<!-- GALLERY SECTION -->
+<section class="welcome" id="gallery">
+
+<h2>Gallery</h2>
+
+<p>Check back soon for photos and videos from our campaign events and student engagements.</p>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="welcome" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>Have questions or want to get involved with the HEAL Movement? Reach out to us!</p>
+
+<p><strong>Email:</strong> contact@healmovement.com</p>
+
+<p><strong>Phone:</strong> +1 (555) 123-4567</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+
+© 2026 HEAL Movement | SLCMC SRC Elections
+
+</p>
+
+</footer>
+
+<script>
+const countdown = new Date("July 31, 2026 00:00:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = countdown - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+const seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("timer").innerHTML=
+
+days+" Days : "+hours+" Hours : "+minutes+" Minutes : "+seconds+" Seconds";
+
+},1000);
+</script>
+
+</body>
+
+</html>
